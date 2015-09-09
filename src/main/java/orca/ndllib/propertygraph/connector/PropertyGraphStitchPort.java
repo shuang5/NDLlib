@@ -36,4 +36,8 @@ public class PropertyGraphStitchPort extends PropertyGraphNode {
 	public void setLabel(String label) {
 		this.label = label;
 	}
+	@Override
+	public void setDefaultNodeType(Vertex v){
+		v.setProperty(PropertyKeys.nodeType, OrcaNodeType.StitchPort);
+	}
 }

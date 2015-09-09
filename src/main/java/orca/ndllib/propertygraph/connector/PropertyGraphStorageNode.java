@@ -79,5 +79,8 @@ public class PropertyGraphStorageNode extends PropertyGraphNode{
 	public void setSharedNetworkStorage(String sharedNetworkStorage) {
 		this.sharedNetworkStorage = sharedNetworkStorage;
 	}
-
+	@Override
+	public void setDefaultNodeType(Vertex v){
+		v.setProperty(PropertyKeys.nodeType, OrcaNodeType.Storage);
+	}
 }

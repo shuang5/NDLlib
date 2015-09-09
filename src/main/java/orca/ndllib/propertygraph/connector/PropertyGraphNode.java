@@ -98,6 +98,8 @@ public class PropertyGraphNode {
 
 		if(nodeType!=null && !nodeType.isEmpty())
 			v.setProperty(PropertyKeys.nodeType, nodeType);
+		else 
+			this.setDefaultNodeType(v);
 
 		if(postBootScript!=null && !postBootScript.isEmpty())
 			v.setProperty(PropertyKeys.postBootScript, postBootScript);
@@ -236,5 +238,8 @@ public class PropertyGraphNode {
 	}
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	public void setDefaultNodeType(Vertex v){
+		v.setProperty(PropertyKeys.nodeType, OrcaNodeType.Node);
 	}
 }

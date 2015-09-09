@@ -28,4 +28,8 @@ public class PropertyGraphResourceSite extends PropertyGraphNode {
 	public void setLon(String lon) {
 		this.lon = lon;
 	}
+	@Override
+	public void setDefaultNodeType(Vertex v){
+		v.setProperty(PropertyKeys.nodeType, OrcaNodeType.ResourceSite);
+	}
 }

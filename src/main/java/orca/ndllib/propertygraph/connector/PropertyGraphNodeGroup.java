@@ -46,4 +46,8 @@ public class PropertyGraphNodeGroup extends PropertyGraphNode {
 	public void setSplittable(String splittable) {
 		this.splittable = splittable;
 	}
+	@Override
+	public void setDefaultNodeType(Vertex v){
+		v.setProperty(PropertyKeys.nodeType, OrcaNodeType.NodeGroup);
+	}
 }
