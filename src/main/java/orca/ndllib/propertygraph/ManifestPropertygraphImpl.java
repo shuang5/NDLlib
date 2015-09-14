@@ -113,4 +113,14 @@ public class ManifestPropertygraphImpl extends Manifest {
 		ManifestLoaderPropertyGraph ml=new ManifestLoaderPropertyGraph(graph);
 		ml.loadFile(new File(file));
 	}
+	public static Graph convertManifestNDLFromString(String rdf){
+		ManifestLoaderPropertyGraph ml=new ManifestLoaderPropertyGraph();
+		ml.loadRDF(rdf);
+		return ml.getGraph();
+	}
+	
+	public static void convertManifestNDLFromString(String rdf, Graph graph){
+		ManifestLoaderPropertyGraph ml=new ManifestLoaderPropertyGraph(graph);
+		ml.loadRDF(rdf);
+	}
 }
